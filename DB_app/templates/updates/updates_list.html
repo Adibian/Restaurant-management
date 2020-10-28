@@ -1,0 +1,35 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <a href="{% url 'update_user' %}">
+        <button class="btn btn-primary">update user</button>
+    </a><p></p>
+    <a href="{% url 'update_Courier' %}">
+        <button class="btn btn-primary">update courier</button>
+    </a><p></p>
+    <a href="{% url 'update_address' %}">
+        <button class="btn btn-primary">update address</button>
+    </a><p></p>
+    <a href="{% url 'update_menu' %}">
+        <button class="btn btn-primary">update menu</button>
+    </a><p></p>
+    <a href="{% url 'update_customer_factor' %}">
+        <button class="btn btn-primary">update customer factor</button>
+    </a><p></p>
+    <a href="{% url 'update_ingredient' %}">
+        <button class="btn btn-primary">update ingredient</button>
+    </a><p></p>
+    <a href="{% url 'update_shop_account' %}">
+        <button class="btn btn-primary">update shop account</button>
+    </a><p></p>
+    <a href="{% url 'update_shop_factor' %}">
+        <button class="btn btn-primary">update shop factor</button>
+    </a><p></p>
+    <a href="{% url 'update_factor_ingredient' %}">
+        <button class="btn btn-primary">update factor ingredient</button>
+    </a><p></p>
+    <a href="{% url 'update_factor_menu' %}">
+        <button class="btn btn-primary">update factor menu</button>
+    </a><p></p>
+
+{% endblock %}

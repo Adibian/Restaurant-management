@@ -1,0 +1,42 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <a href="{% url 'insert_into_user' %}">
+        <button class="btn btn-primary">insert into user</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_Courier' %}">
+        <button class="btn btn-primary">insert into courier</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_address' %}">
+        <button class="btn btn-primary">insert into address</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_menu' %}">
+        <button class="btn btn-primary">insert into menu</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_customer_factor' %}">
+        <button class="btn btn-primary">insert into customer factor</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_ingredient' %}">
+        <button class="btn btn-primary">insert into ingredient</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_shop_account' %}">
+        <button class="btn btn-primary">insert into shop account</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_shop_factor' %}">
+        <button class="btn btn-primary">insert into shop factor</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_factor_menu' %}">
+        <button class="btn btn-primary">insert into factor menu</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_factor_ingredient' %}">
+        <button class="btn btn-primary">insert into factor ingredient</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_user_comment' %}">
+        <button class="btn btn-primary">insert into user comment</button>
+    </a><p></p>
+    <a href="{% url 'insert_into_manager_comment' %}">
+        <button class="btn btn-primary">insert into manager comment</button>
+    </a><p></p>
+
+
+{% endblock %}

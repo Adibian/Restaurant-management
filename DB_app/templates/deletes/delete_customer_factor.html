@@ -1,0 +1,18 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    {% for obj in all_customer_factor %}
+        <div class="row" style="border: solid darkred 1px; padding: 10px">
+            <p>factor_number: {{ obj.factor_number }}</p>
+            <p>address: {{ obj.address }}</p>
+            <p>order_time: {{ obj.order_time }}</p>
+            <p>user: {{ obj.user }}</p>
+            <p>courier: {{ obj.courier }}</p>
+            {% if delete %}
+                <a href="{% url 'delete_customer_factor' pk=obj.pk %}">
+                    <button>delete</button>
+                </a>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endblock %}

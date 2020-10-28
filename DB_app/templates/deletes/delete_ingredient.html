@@ -1,0 +1,16 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    {% for obj in all_ingredient %}
+        <div class="row" style="border: solid darkred 1px; padding: 10px">
+            <p>item name: {{ obj.item_name }}</p>
+            <p>shop name: {{ obj.shop_name }}</p>
+            <p>price: {{ obj.price }}</p>
+            {% if delete %}
+                <a href="{% url 'delete_ingredient' pk=obj.pk %}">
+                    <button>delete</button>
+                </a>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endblock %}

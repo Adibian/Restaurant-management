@@ -1,0 +1,17 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+                                        {% for obj in all_address %}
+                                            <div class="row" style="border: solid darkred 1px; padding: 10px">
+                                                <p>address name: {{ obj.address_name }}</p>
+                                                <p>address path: {{ obj.address_path }}</p>
+                                                <p>fixed phone number: {{ obj.fixed_phone_number }}</p>
+                                                {% if delete %}
+                                                    <a href="{% url 'delete_address' pk=obj.pk%}">
+                                                        <button>delete</button>
+                                                    </a>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
+
+{% endblock %}

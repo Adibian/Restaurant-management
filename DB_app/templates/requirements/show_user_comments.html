@@ -1,0 +1,12 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    {% for obj in user_comment %}
+        <div class="row" style="border: solid darkred 1px; padding: 10px">
+            <p>user: {{ obj.user.first_name }} {{ obj.user.last_name }}({{ obj.user.national_id }}):</p>
+            <p>text: {{ obj.text }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    {% for obj in all_shop_account %}
+        <div class="row" style="border: solid darkred 1px; padding: 10px">
+            <p>shop_name: {{ obj.shop_name }}</p>
+            <p>active: {{ obj.active }}</p>
+            {% if delete %}
+                <a href="{% url 'delete_shop_account' pk=obj.pk %}">
+                    <button>delete</button>
+                </a>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endblock %}

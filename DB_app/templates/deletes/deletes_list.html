@@ -1,0 +1,38 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <a href="{% url 'delete_user_list' %}">
+        <button class="btn btn-primary">delete user</button>
+    </a><p></p>
+    <a href="{% url 'delete_Courier_list' %}">
+        <button class="btn btn-primary">delete courier</button>
+    </a><p></p>
+    <a href="{% url 'delete_address_list' %}">
+        <button class="btn btn-primary">delete address</button>
+    </a><p></p>
+    <a href="{% url 'delete_menu_list' %}">
+        <button class="btn btn-primary">delete menu</button>
+    </a><p></p>
+    <a href="{% url 'delete_customer_factor_list' %}">
+        <button class="btn btn-primary">delete customer factor</button>
+    </a><p></p>
+    <a href="{% url 'delete_ingredient_list' %}">
+        <button class="btn btn-primary">delete ingredient</button>
+    </a><p></p>
+    <a href="{% url 'delete_shop_account__list' %}">
+        <button class="btn btn-primary">delete shop account</button>
+    </a><p></p>
+    <a href="{% url 'delete_shop_factor_list' %}">
+        <button class="btn btn-primary">delete shop factor</button>
+    </a><p></p>
+
+    <a href="{% url 'delete_factor_menu_list' %}">
+        <button class="btn btn-primary">delete factor menu</button>
+    </a><p></p>
+    <a href="{% url 'delete_factor_ingredient_list' %}">
+        <button class="btn btn-primary">delete factor ingredient</button>
+    </a><p></p>
+
+
+
+{% endblock %}

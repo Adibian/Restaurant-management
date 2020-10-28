@@ -1,0 +1,27 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <a href="{% url 'order_food' %}">
+        <button class="btn btn-primary">ordering food</button>
+    </a><p></p>
+    <a href="{% url 'order_ingredient' %}">
+        <button class="btn btn-primary">order ingredient</button>
+    </a><p></p>
+    <a href="{% url 'show_user_list' %}">
+        <button class="btn btn-primary">show user orders</button>
+    </a><p></p>
+    <a href="{% url 'show_restaurant_orders' %}">
+        <button class="btn btn-primary">show restaurant orders</button>
+    </a><p></p>
+    <a href="{% url 'show_cost_benefit' %}">
+        <button class="btn btn-primary">show restaurant cost benefit</button>
+    </a><p></p>
+    <a href="{% url 'show_manager_comments' %}">
+        <button class="btn btn-primary">show manager comments</button>
+    </a><p></p>
+    <a href="{% url 'show_user_comments' %}">
+        <button class="btn btn-primary">show user comments</button>
+    </a><p></p>
+
+
+{% endblock %}

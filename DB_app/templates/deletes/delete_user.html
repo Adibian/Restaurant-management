@@ -1,0 +1,22 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    {% for obj in all_user %}
+        <div class="row" style="border: solid darkred 1px; padding: 10px">
+            <p>national_id: {{ obj.national_id }}</p>
+            <p>first_name: {{ obj.first_name }}</p>
+            <p>last_name: {{ obj.last_name }}</p>
+            <p>phone_number: {{ obj.phone_number }}</p>
+            <p>date_of_birth: {{ obj.date_of_birth }}</p>
+            {% if delete %}
+                <a href="{% url 'delete_user' pk=obj.pk %}">
+                    <button>delete</button>
+                </a>
+            {% elif show %}
+                <a href="{% url 'show_user_orders' pk=obj.pk %}">
+                    <button>show details</button>
+                </a>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endblock %}

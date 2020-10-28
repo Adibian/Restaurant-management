@@ -1,0 +1,13 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    {% for obj in factor_menu %}
+        <div class="row" style="border: solid darkred 1px; padding: 10px">
+            <p>food name: {{ obj.food_name }}</p>
+            <p>sum number: {{ obj.sum_number }}</p>
+            <p>sum price: {{ obj.sum_peice }}</p>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}

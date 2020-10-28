@@ -1,0 +1,20 @@
+<!doctype html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <h1 class="jumbotron-heading" style="color: #0389D2; text-align: center">Restaurant Data</h1>
+    {{ f.user }}
+    {{ f.fixed_phone_number }}
+    <hr>
+    <a href="{% url 'inserts_list' %}" >
+        <button class="btn btn-primary">inserts</button>
+    </a><p></p>
+    <a href="{% url 'deletes_list' %}">
+        <button class="btn btn-primary">delete</button>
+    </a><p></p>
+    <a href="{% url 'updates_list' %}">
+        <button class="btn btn-primary">update</button>
+    </a><p></p>
+    <a href="{% url 'requirements_list' %}">
+        <button class="btn btn-primary">requirements list</button>
+    </a>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <form method="post" style="margin-left: 20px;margin-right: 20px">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% for ingredient in ingredients %}
+            <input type="checkbox" name="ingredient" value="{{ ingredient.item_name }}">{{ ingredient.item_name }}
+            <input type="number" name="{{ ingredient.item_name }}" value="1" min="1" max="10"><br>
+        {% endfor %}
+        <p></p>
+        <input type="submit" class=" btn btn-primary" value="insert" style="margin-left: 60px;margin-right: 60px">
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+    <div>
+        <h4>active shop accounts:</h4>
+        {% for active_shop in active_shops %}
+            <h5>{{ active_shop.shop_name }} </h5>
+        {% endfor %}
+        <hr>
+    </div>
+{% endblock %}
